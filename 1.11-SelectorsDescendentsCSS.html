@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Selectors descendents</title>
+  </head>
+  <body>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+     
+    <h1>Selectors compostos en CSS</h1>
+
+    <p>Els selectors descendents en CSS són selectors compostos que ens permeten seleccionar un element dins d'un altre. </p>
+
+    <ol start="2">
+      <li><h2>SELECTORS DESCENDENTS</h2></li>
+    
+    <p>
+      Analitzem el html de <a href="./1.11 - Exercici.html" target="_blank">l'exercici</a>. Tenim dos h2: el primer fora del div i el segon dins el div. Si volguessim seleccionar el segon h2, podriem escriure una regla amb una etiqueta h2. El problema és que es seleccionaríen tots els h2. 
+    </p>
+
+    <p>
+      Per seleccionar, l'h2 que està dins del div, podem utilitzar un selector descendent posant div, un espai i h2.
+
+    <pre>
+      <code>
+        div h2 {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+      
+  <h2>LIMIT DE DESCENDÈNCIA</h2>
+    
+  <p>
+      Quant al límit de descendència que podem donar, tècnicament no hi ha límit. Podríem posar html, body i title 2 i això seguiria funcionant. Però no és recomanable; les bones pràctiques indiquen que no és bona idea baixar més d'un nivell, és a dir, com a màxim tenir dos elements div, title 2. Això és alguna cosa que potser ara mateix no entengueu, però d'aquí a dos o tres classes, quan parlem de l'especificitat, entendreu per què no és bona idea utilitzar més de dos elements. De totes maneres, si en algun moment necessiteu baixar més elements o crear aquesta cadena de manera més llarga, ja us ensenyaré trucs per arribar al mateix punt però només amb dos elements. Així que recordeu que amb això podem seleccionar elements de forma descendent. 
+  </p>
+
+  <h2>PARES I FILLS</h2>
+      
+  <p>
+  Altra cosa important que heu de recordar és que això se li denomina seleccionar fills. Estem dins d'un pare, entrem al div i l'h2 seria fill del div. En CSS no tenim cap manera de pujar en l'escala, és a dir, des d'aquest h2 no podríem seleccionar el div. Actualment, en el borrador de CSS de selectors que ja estan pel nivell 4, si no m'equivoco, s'està treballant en una pseudo-classe que sembla que ens permetrà seleccionar pares. Però de moment, cap navegador la suporta. 
+  </p>
+
+    <p>
+      En la
+      <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank"
+        >documentació de w3schools</a> teniu més informació sobre els selectors i els seus patrons.
+    </p>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+    
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <title>Herència en CSS</title>
+  </head>
+  <body>
+    <p><a href="../index.html">Anar a l'índex</a><p>
+     
+    <h1>Herència en CSS</h1>
+
+    <p>
+      L'herència és la capacitat que tenen alguns elements d'heredar algunes propietats dels seus elements contenidors. Els elements contenidors són els pares, avis o besavis dins de l'html.
+    </p>
+
+    <h2>PROPIETATS QUE S'HEREDEN</h2>
+
+    <p>
+      He creat un arxiu html amb un h1 que té a dins té la paraula CSS entre etiquetes span. 
+    </p>
+
+    <pre>
+      &lt;h1 id="title" class="title">Fonaments de &lt;span>CSS&lt;span></h1>
+    </pre>
+
+    <p>
+      La paraula CSS dins de les etiquetes es veurà igual que la resta de l'h1. El CSS que hem posat a sota entre etiquetes span però fora de l'h1 es veu d'una manera diferent. L'estil que agafa la paraula CSS no li dona l'etiqueta span sinó les propietats que hereda de l'h1.
+    </p>
+
+    <p>
+      Si no s'heredessin certes propietats seria molt caòtic treballar amb CSS. Les propietats que s'hereden o no s'hereden els anireu descobrint poc a poc. Moltes propietats que s'hereden es dedueixen per sentit comú.
+    </p>
+    
+    <p>
+      Si enlloc de treballar amb background-color, treballem amb la propietat color, apliquem un color al text del h1. El CSS quedaria així:
+    </p>
+
+    <pre>
+      .title{
+        color: cyan;
+      }
+    </pre>
+
+    <p>
+      Com podeu veure després d'aplicar el color cyan a l'h1, l'span també hereda el color de la lletra. Noteu que el CSS de sota no adquireix el color cyan.
+    </p>
+
+    <p>El tamany de la lletra també s'hereda. Si posem font-size a l'h1, l'span també l'adquireix. Els temes de colors i fonts en la majoria d'ocasions, s'hereden.</p>
+
+    <h2>PROPIETATS QUE NO S'HEREDEN</h2>
+    
+    <p>
+      Muntem un paràgraf amb un classe text, amb un lorem ipsum i a dins un enllaç d'exemple al mig del text.
+    </p>
+
+    <p>
+      Si modifiquem el CSS per posar un color vermell a la classe = "text", veurem com el text es torna vermell però l'enllaç roman de color blau.
+    </p>
+
+    <p>
+      Això és perquè els enllaços no hereden les propietats  dels progenitors. Té sentit que sigui així perquè els enllaços són elements que necessiten ser distinguits i amb un estil propi.
+    </p>
+
+    <p>
+      Per donar un color vermell a l'enllaç, hauríem de fer-ho de la següent manera:
+    </p>
+
+    <pre>
+      .link{
+        color: red;
+      }
+    </pre>
+
+    <p>Ara el color del text dels enllaços es del mateix color del text del paràgraf.</p>
+
+    <h2>VALOR INHERIT</h2>
+    <p>
+      Treballa amb tres elements és molt fàcil però imagineu-vos que tinguessim deu tipus de link i deu tipus de text. Si volguessim que tots els enllaços agafessin el mateix color dels paràgrafs, hauríem de fer canvis a mà. Ens tornaríem una mica bojos.   
+    </p>
+    
+    <p>
+      Existeix un valor anomenat inherit que el que fa és forçar que els fills heredin propietats dels pares quan normalment no les haurien d'heredar.
+    </p>
+
+    <pre>
+      .link{
+        color: inherit;
+      }
+    </pre>
+
+    <p>
+      Amb inherit estem forçant l'herència. Si ara canviés el color del text a verd, l'enllaç herederia aquest color verd.
+    </p>
+
+    <p>
+      Més endavant, hi haurà moments que veureu que certes propietats no s'hereden però us vindria bé que s'heredessin. En aquests casos, podem forçar l'herència. 
+    </p>
+    
+    <h2>VALOR INITIAL</h2>
+    <p>
+      Podem tenir el cas contrari que seria quan un element hereda una propietat que no volem que s'heredi. Muntem el següent exemple:
+    </p>
+
+    <pre>
+      &lt;ul class="list">
+        &lt;li class="list-item">Item 1&lt;/li>
+        &lt;li class="list-item">Item 2&lt;/li>
+        &lt;li class="list-item">Item 3&lt;/li>
+        &lt;li class="list-item-extra">Item 4&lt;/li>
+      &lt;/ul>
+    </pre>
+
+    <pre>
+      .list-item-extra {
+        color: initial;
+      }
+    </pre>
+
+    <p>
+      Todo allò que heredis, ignora-ho i queda't amb els teus estils per defecte. El tems dels estils per defecte i d¡on surten ho tractarem més endavant.
+    </p>
+
+
+    <p>
+      i tampoc funciona. Al final, quan ha provat moltes maneres i cap funciona, decideix posar un !important
+    </p>
+
+    <pre>
+      h1.title {
+        background-color: red !important;
+      }
+    </pre>
+
+  <p>
+    i ara si que li funciona!
+  </p>
+
+  <p>
+    Què ha passat en realitat?
+  </p>
+
+  <p>
+    Quan posem un !important ens estem carregant l'especificitat. !important guanya a totes les puntacions.
+  </p>
+
+  <p>
+    Imagineu que arriba un nou desenvolupador web i vol donar estil al h1, segueix la mateixa lògica que el seu precedent i escriu...
+  </p>
+
+  <pre>
+    h1.title {
+      background-color: blue !important;
+    }
+  </pre>
+
+  <p>
+    Aquesta última sobreescriurà la precedent.
+  </p>
+
+  <p>
+    Si treiem el h1 i ho deixem així
+  </p>
+
+  <pre>
+    .title {
+      background-color: blue !important;
+    }
+  </pre>
+
+  <p>
+    Ara guanya el vermell altre cop!
+  </p>
+
+  <p>
+    Quina és el truc per no tornar-se boig a l'hora d'escriure un CSS correcte?
+  </p>
+
+  <p>
+    És utilitzar sempre les classes
+  </p>
+
+  <pre>
+      .title {
+        background-color: teal;
+      }
+  </pre>
+
+  <p>
+    Tot això es modificarà una mica quan treballem amb pseudo-classes i pseudo-elements. Modificarem una mica aquesta regla que hem explicat.
+  </p>
+
+    <h2>COM SABEM QUE ESTEM ESCRIVINT UN BON CSS?</h2>
+
+    <p>CSS Specificity Graph Generator és una <a href="https://jonassebastianohlsson.com/specificity-graph/">web</a> en la qual es pot mirar si el vostre CSS és correcte o no.</p>
+
+    <p>
+      Un gràfic amb molts pics vol dir que esteu tenint molts problemes amb l'especificitat i que el CSS no és bo. 
+    </p>
+
+    <h2>ESTILS EN CASCADA</h2>
+
+    <p>
+      Els estils en cascada funciona sempre que l'especificitat sobre l'element sigui la mateixa.
+    </p>
+
+  <pre>
+      .title {
+        background-color: teal;
+      }
+
+      .title {
+        background-color: yellow;
+      }
+  </pre>
+
+  <p>
+    Si la especificitat no és la mateixa, torna a guanyar el color teal.
+  </p>
+
+  <pre>
+    h1.title {
+      background-color: teal;
+    }
+
+    .title {
+      background-color: yellow;
+    }
+</pre>
+
+  <p>
+  Utilitzem sempre classes per la cascada no estigui afectada.
+  </p>
+
+   
+    <p><a href="../index.html">Anar a l'índex</a></p>
+  </body>
+</html>

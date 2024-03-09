@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+
+  span {
+      font-weight: bold;
+    }
+
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Selectors d'atributs: id i classe</title>
+  </head>
+  <body>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+    
+    <ol type="a" start="2" >
+      <li><h1 id="title" class="title">Selectors d'atributs en CSS</h1></li>
+    </ol>
+    
+
+    <p>
+      Hi ha tres tipus de selectors d'atributs en CSS: id, classe i altres atributs.
+    </p>
+
+    <ul>
+
+    <li><h2>SELECTOR d'ID</h2></li>
+
+    <p>
+      Per utilitzar el selector d'id necessitem crear elements HTML que tinguin un id. Creem-los. Us proposo posar l'atribut id amb valor title a l'&lt;h1> d'aquesta mateixa pàgina. 
+    </p>
+
+    <pre>
+      <code>
+        &lt;h1 id="title">Selectors d'atributs en CSS</h1>
+      </code>
+    </pre>
+
+    <p>
+      Per generar un selector d'id, aneu al CSS i poseu hastag i seguidament el nom de l'id que voleu canviar. No poseu espai entre el hastag i el valor de l'id perquè us donaarà error.
+    </p>
+
+    <pre>
+      <code>
+        
+      &lt;h1 id="title">Selectors d'atributs en CSS</h1>
+
+      #title {
+        background-color: lightcoral;
+      }
+      </code>
+    </pre>
+
+    <p>
+      És important senyalar que els selectors d'id són case-sensitive que implica que heu de respectar les minúscules i les majúscules que heu posat als valors dels id. Si canvieu id="title" a id="Title", el CSS no us funcionarà. Proveu-ho si us plau!
+    </p>
+
+    <p>
+      <span>En desenvolupament web, s'aconsella sempre posar tots els valors dels id's i de les classes en minúscula o lowercase.</span>
+    </p>
+
+    <p>
+      No és recomanable utilitzar els ids per donar estils. No ho feu mai. Els ids són identificadors i com a tals només poden ser únics. Un dels principis de CSS és que els estils siguin reutilitzables i amb id no es poden reutilitzar.
+    </p>
+
+    <p>
+      En la
+      <a ref="https://developer.mozilla.org/es/docs/Web/CSS/ID_selectors" target="_blank"
+        >documentació de MDNwebdocs</a> teniu més informació sobre els selectors d'ID en CSS.
+    </p>
+        
+  <li><h2>SELECTOR DE CLASSE</h2></li>
+
+  <p>
+    Són els selectors que es recomanen utilitzar. Per utilitzar el selector de classe, necessitem crear elements HTML que tinguin atributs de classe. Creem-los. Us proposo posar l'atribut class amb valor title a l'&lt;h1> d'aquesta mateixa pàgina i borrar el id="title". 
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1 class="title">Selectors d'atributs en CSS</h1>
+    </code>
+  </pre>
+
+  <p>
+    Per generar un selector de classe, aneu al CSS i poseu punt i seguidament el nom de la classe que voleu canviar. No poseu espai entre el punt i el valor de la classe perquè us donaarà error.
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1 class="title">Selectors d'atributs en CSS</h1>
+
+      .title {
+        background-color: lightcoral;
+      }
+    </code>
+  </pre>
+
+  <p>
+    Totes les etiquetes que portin la class="title" tindran un color de fons com el que li hem posat. El selector de classe és case-sensitive igualment. Es recomana escriure els valors de les classes en minúscula.
+  </p>
+
+  <p>
+    No hi ha límit de número de classes a posar a un element HTML. Podem posar totes les que vulguem però els valors han d'anar separats per un espai. Heu d'esperar a que us expliqui la metodologia BEM per saber com escriure i aplicar les classes als elements HTML. La metodologia BEM (Block Element Modifier) en CSS és una convenció de nomenclatura que ajuda a organitzar i estructurar el teu codi CSS de manera clara i mantenible. 
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1 class="title title2 title3 title4">Selectors d'atributs en CSS</h1>
+    </code>
+  </pre>
+
+  <p>
+    Per tenir bones praxis des del principi, heu d'esperar a que us expliqui la metodologia BEM per saber com escriure i aplicar les classes als elements HTML. La metodologia BEM (Block Element Modifier) en CSS és una convenció de nomenclatura que ajuda a organitzar i estructurar el teu codi CSS de manera clara i mantenible. 
+  </p>
+
+  <p>
+    L'avantatge de les classes és que es poden repetir. Podem posar l'atribut class amb el mateix valor a molts elements HTML. Podem posar molts estils a molts elements, utilitzant un sol selector.
+  </p>
+
+  <p>
+    De moment, només estem treballant amb la propietat background-color i no veieu la utilitat de reutilitzar-la. Quan treballem amb les propietats d'una caixa, entendreu la utilitat de reutilitzar.
+  </p>
+
+    <p>
+      En la
+      <a href="https://developer.mozilla.org/es/docs/Web/CSS/Class_selectors" target="_blank"
+        >documentació de MDNwebdocs</a> teniu més informació sobre els selectors de classe en CSS.
+    </p>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+    
+  </body>
+</html>

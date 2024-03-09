@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Selectors de fills directes</title>
+  </head>
+  <body>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+     
+    <h1>Selectors de fills directes en CSS</h1>
+
+    <p>
+      Els selectors de fill directe en CSS són selectors compostos que ens permeten seleccionar NOMÉS els fills directes d'un element dins de l'HTML.
+    </p>
+
+    
+    <p>
+      En el fitxer html que us proposo, si volguessim seleccionar tots els p dins del div amb classe container podriem utilitzar un selector que ja hem vist.
+    </p>  
+    
+    <pre>
+      <code>
+        .container p {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+
+    <p>
+      Hi ha un detall important en l'html. El paràgraf de la linia 28 és nét del div amb classe container de la linia 20. Per tant, si volguessim obviar aquest paràgraf nét i només seleccionar els dos paràgrafs fills directes (linia 21 i 35) del div amb classe container de la linia 20, podriem utilitzar els selectors de fills directes. Es fa servir el símbol > també anomenat "més gran que".
+    </p>
+    
+    <pre>
+      <code>
+        .container > p {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+    
+    <p>
+      En la <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">documentació de w3schools</a> teniu més informació sobre els selectors i els seus patrons.
+    </p>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+
+  </body>
+</html>

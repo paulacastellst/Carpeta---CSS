@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Selectors de germa(ns)</title>
+  </head>
+  <body>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+     
+    <h1>Selectors de germa(ns) en CSS</h1>
+
+    <p>
+      Els selectors de germa(ns) en CSS són selectors compostos que ens permeten seleccionar un element germà dins de l'HTML. Un element germà es situa al mateix nivell dins l'estructura de l'html. Per tant, si l'element està dins d'un altre element, és fill, i si estan al mateix nivell, són germans.
+    </p>
+
+    <pre>
+      <code>
+        &lt;h1>TITOL&lt;/h1>
+            &lt;h2>TITOL 2.1&lt;/h2>
+            &lt;p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, nemo cum. Doloribus soluta
+            quasi iusto laborum eveniet aut dolore aperiam nobis in voluptate. Repellendus consequuntur expedita
+            explicabo dolor cumque minus!
+            &lt;/p>
+            &lt;div>
+            
+            &lt;/div>
+            &lt;h2>TITOL 2.2&lt;/h2>
+      </code>
+    </pre>       
+
+    <li><h2>SELECTOR DE GERMÀ SEGÜENT</h2></li>
+    
+    <p>
+      Per seleccionar només el germà següent, és a dir l'etiqueta germana següent o la classe germana següent d'una etiqueta germana anterior o d'una classe germana anterior, farem servir el signe + entre la germana anterior i la germana següent. Aquest selector només afectarà els elements que sigui germà i que aparegui després de l'element de referència, no afectarà a l'anterior. Ho entendrem millor amb un exemple: 
+    </p>
+
+    <p>
+      Si volguessim seleccionar NOMÉS el segon h2 del nostre exemple, podriem recolzar-nos en el div i seleccionar el seu germà següent h2.
+    </p>    
+
+    <pre>
+      <code>
+        div + h2 {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+    
+    <p>
+      Podem barrejar tant etiquetes com classe quan seleccionem germans següents.
+    </p>
+
+    <pre>
+      <code>
+        .text-2 + .title-2 {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+
+    <p>
+      En el <a href="./1.12-Exercici.html">fitxer 1.12 - Exercici.html</a>, intenteu posar un background de color teal a l'h2 de la linia 34 del fitxer i un color coral a l'h2 de la linia 26.
+    </p>
+    
+    <li><h2>SELECTOR DE TOTS ELS GERMANS SEGÜENTS</h2></li>
+    
+    <p>
+      Per seleccionar tots els germans següents, fem servir el símbol ~ que es diu titlla en català, virgulilla en castellà o diacritic mark en anglès. La titlla és una ratlleta que es posa sobre una lletra com a signe diacrític o d'abreviació. La titlla es posa prement ALT GR + 4. Com que és un signe que és comporta com un accent perquè aparegui hem de prémer espai o una lletra. Aquest selector només afectarà els elements que siguin germans i que apareguin després de l'element de referència, no els anteriors.  
+    </p>
+
+    <p>
+      Si volguessim seleccionar els dos p després del primer p amb classe text-1, fariem servir la virgulilla.
+    </p>    
+
+    <pre>
+      <code>
+        &lt;p class="text-1">Paràgraf 1&lt;/p>
+        &lt;p class="text-2">Paràgraf 2&lt;/p>
+        &lt;p class="text-3">Paràgraf 3&lt;/p>
+
+        .text-1 ~ p {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+    
+    <p>
+      Si canviem el nom de les classes dels dos últims p i hi posem la mateixa classe, també funcionaria si utilitzem la titlla.
+    </p>
+
+    <pre>
+      <code>
+        &lt;p class="text-1">Paràgraf 1&lt;/p>
+        &lt;p class="text">Paràgraf 2&lt;/p>
+        &lt;p class="text">Paràgraf 3&lt;/p>
+      
+        .text-1 ~ .text {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+
+    <p>
+      No és recomanable baixar molts nivells però podem utilitzar aquestes configuracions:
+    </p>
+
+    <pre>
+      <code>
+        .text-1 ~ .text span {
+          background-color: teal;
+        }
+  
+        .text-1 ~ .text + span {
+          background-color: teal;
+        }
+      </code>
+    </pre>
+
+    <p>
+      En la <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">documentació de w3schools</a> teniu més informació sobre els selectors i els seus patrons.
+    </p>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+
+  </body>
+</html>

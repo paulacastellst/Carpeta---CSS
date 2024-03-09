@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+
+  span {
+      font-weight: bold;
+    }
+
+    </style>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Selectors elementals en CSS</title>
+  </head>
+  <body>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+     
+    <h1>Selectors elementals en CSS</h1>
+
+    <p>Hi ha dos tipus de selectors elementals en CSS :</p>
+
+    <ol type="i">
+    <li><h2>SELECTOR UNIVERSAL</h2></li>
+
+    <p>
+      És simplement un asterisc. El selector universal el que fa és seleccionar-ho tot. S'ha d'utilizar amb molt de compte i només s'utilitza en certs casos molt concrets. Més endavant, quan us ensenyi el box model o el box sizing, aquest selector s'utilitza per un parell d'elements concrets.
+    </p>
+
+    <pre>
+      <code>
+        * {
+          background-color: lightcoral;
+        }
+      </code>
+    </pre>
+
+    <p>Un pràctica ABSOLUTAMENT QUE HEU D'EVITAR és la següent:</p>
+
+    <pre>
+      <code>
+        * {
+          margin: 0;
+          background-color: lightcoral;
+        }
+      </code>
+    </pre>
+
+  <li><h2>SELECTOR DE TIPUS O ETIQUETA</h2></li>
+
+  <p>
+    És simplement posar el nombre de l'etiqueta que volem donar estil. 
+  </p>
+
+  <pre>
+    <code>
+      h1 {
+        background-color: lightcyan;
+      }
+    </code>
+  </pre>
+
+  <p>Si volem canviar TOTES les etiquetes &lt;p> posariem el següent</p>
+
+  <pre>
+    <code>
+      p {
+        background-color: lightgreen;
+      }
+    </code>
+  </pre>
+
+  <p>
+    Aquests selector s'aplica en el reset d'estils que es fa servir per començar una pàgina web. Algunes etiquetes com h1 o p per exemple porten uns estils associats per defecte. Aquests estils es poden resetejar.
+  </p>
+
+  <p>
+    Per exemple, l'etiqueta h1 porta aquests estils associats:
+  </p>
+
+  <pre>
+    <code>
+      h1 {
+        display: block;
+        font-size: 2em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+      }
+    </code>
+  </pre>
+
+  <p>
+    La majoria d'aquests estils no els coneixem encara, però resetejar o normalitzar els estils de h1 voldria dir treure aquestes propietats associades a &lt;h1>. El reset o la normalització d'estils es fa a totes les etiquetes. <a href="../1.17 - Normalitzar estils del navegador/">Ho veurem més endavant</a>.
+  </p>
+
+  <p>
+    Podem donar estils a moltes altres etiquetes, com per exemple, a &lt;ul> o a &lt;li> i tants d'altres. En general, aquests selectors s'utilitzen en comptades ocasions. Els que més s'utilitzen són els selectors de classe.
+  </p>
+
+  <p>
+    En la
+    <a href="https://www.w3schools.com/css/css_selectors.asp" target="_blank"
+      >documentació de W3Schools</a> teniu més informació sobre els selectors de CSS.
+  </p>
+
+  <p><a href="../index.html">Anar a l'índex</a><p>
+  <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+  
+  </body>
+</html>

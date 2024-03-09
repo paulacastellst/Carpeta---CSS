@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <title>Prefixes propietaris</title>
+  </head>
+  <body>
+    <p><a href="../index.html">Anar a l'índex</a><p>
+     
+    <h1>Prefixes propietaris</h1>
+
+    <h2>NORMALITZAR ESTILS</h2>
+
+    <p>
+    Al principi d'aquest curs, hem vist com el CSS, fins a dia d'avui, funciona en mòduls independents. Això permet que cada mòdul pugui créixer sense dependre del resta. Això és la part que vam veure respecte al funcionament intern de CSS.
+    </p>
+    <p>
+      Per altra banda tenim el tema dels navegadors. Tant fa el que el que avanci CSS per la seva banda si els navegadors no implementen aquestes millores. En aquest conflicte és on entra el tema dels prefixos propietaris. Això significa que quan una propietat CSS es converteix en un estàndard o comencen a fer proves amb ella, els navegadors necessiten implementar-la mitjançant els prefixos propietaris. Si aquesta propietat ja s'ha convertit en recomanació i ha entrat dins del que pertany a CSS, els prefixos ja no fan falta. Però fins que aquesta propietat no arriba a convertir-se en una propietat com a tal, necessitem col·locar certs prefixos perquè els navegadors siguin capaços d'interpretar-la.
+    </p>
+
+    <p>
+      Aquí us estic ensenyant la pàgina de AutoPrefixer. Això és el que fa: afegir aquests prefixos per nosaltres. No té cap sentit que nosaltres aprenguem quins prefixos cal posar i molt menys encara que els posem a mà. Per això existeix AutoPrefixer.
+    </p>
+
+    <p>
+    <a href="https://autoprefixer.github.io/">AutoPrefixer</a> és una eina que s'utilitza per afegir automàticament prefixos de navegador al vostre codi CSS. Aquesta eina és útil per assegurar-se que les propietats CSS que utilitzeu tinguin el format correcte i funcionin adequadament en diferents navegadors, ja que alguns navegadors poden requerir prefixos específics per a certes propietats CSS.
+
+    Amb el temps, les especificacions CSS poden evolucionar i canviar, i alguns navegadors poden implementar característiques noves de manera diferent. Els prefixos de navegador són fragments de codi afegits davant de certes propietats CSS per aconseguir que aquestes funcions específiques en navegadors concrets. A mesura que aquestes característiques es converteixen en estàndards, els prefixos ja no són necessaris.
+
+    L'AutoPrefixer simplifica aquest procés. Quan afegiu el vostre codi CSS a l'eina AutoPrefixer, aquesta analitza les propietats CSS utilitzades i afegeix els prefixos necessaris per assegurar-se que el vostre estil es renderitzi de manera coherent en diversos navegadors. Això us estalvia la feina de recordar quins prefixos són necessaris i de modificar manualment el vostre codi per a cada navegador específic.
+
+    Per resumir, l'AutoPrefixer és una eina que automatitza l'afegir de prefixos de navegador al vostre codi CSS, millorant la compatibilitat i assegurant-se que el vostre estil es mostri correctament en diferents plataformes i navegadors.
+    </p>
+    
+    <p>
+      Aquí tenim quatre propietats. Si és la primera vegada que veieu CSS, potser no sabreu per què serveixen. Aquestes quatre propietats encara no estan implementades a tots els navegadors amb un suport total. Per això, si us n'adoneu, aquí tenim "display: grid". Això seria el que nosaltres escrivim, però en el resultat tenim "display: -ms-grid" i després "display: grid". Això implica que el prefix "-ms" és per als Microsoft System. També tenim la pròpia vida propietat "transition: 0.5s", i aquí al resultat tenim "-webkit-transition: 0.5s" o "transition: 0.5s". "-webkit" és per al tema de Chrome i "-o" és per Òpera.
+    </p>
+
+    <p>
+      Així que gràcies a aquests prefixos podem implementar aquestes millores i que el navegador sigui capaç de interpretar-ho. I perquè tot això se'ns escrigui automàticament, no hem de venir AutoPrefixer i enganxar el nostre codi. El que anem a fer és instal·lar un programa que se'n va a encarregar de fer això per nosaltres. Aquest programa és PrePros, un programa completament gratuït amb l'única limitació que si no el pagueu cada cert temps, surt una finestreta demanant-vos que el compreu.
+    </p>
+
+    <p>
+      Podeu triar el vostre sistema operatiu, descarregar-lo, instal·lar-lo i configurar-lo. Aquest programa us permetrà veure com es processa automàticament el vostre CSS amb els prefixos necessaris.
+    </p>
+
+    <p><a href="../index.html">Anar a l'índex</a></p>
+  </body>
+</html>

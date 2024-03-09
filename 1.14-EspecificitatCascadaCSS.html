@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <title>Especificitat i Cascada en CSS</title>
+  </head>
+  <body>
+    <p><a href="../index.html">Anar a l'índex</a><p>
+     
+    <h1>Especificitat i Cascada en CSS</h1>
+
+    <p>
+      A partir d'aquest punt començarem a parlar dels fonaments de CSS o com funciona CSS. 
+    </p>
+
+    <p>
+      He creat un <a href="./1.14-Exercici.html">exercici</a> amb un h1 que té un id i una classe i un css amb sis selectors que apunten al h1 per donar-li estils. 
+    </p>
+
+    <pre>
+      <code>
+        &lt;h1 id="title" class="title">Fonaments de CSS</h1>
+    
+
+        h1{
+          background-color:red;
+        }
+        
+        .title{
+          background-color: blue;
+        }
+        
+        #title{
+          background-color: green;
+        }
+        
+        h1.title{
+          background-color: yellow;
+        }
+        
+        h1#title{
+          background-color: teal;
+        }
+        
+        h1.title#title{
+          background-color: coral;
+        }
+      </code>
+    </pre>
+
+    <p>
+      Quin és el selector que guanyarà i acabarà per donar-li estil a l'h1?
+    </p>
+
+    <p>Si treiem l'anul·lació del CSS feta amb els comentaris, veurem de quin color es pinta.</p>
+
+    <p>
+      Si és la primera vegada que veieu aquesta configuració en CSS, podríeu pensar que els estils que estan per sota sobreescriuen als que estan a dalt.
+    </p>
+
+    <p>
+      Què passa Si agafem l'última regla i la posem a dalt de tot?
+    </p>
+
+    <p>Això passa perquè l'especificitat d'aquest selector és la més alta i gunaya sobre totes les altres.</p>
+
+    <h2>ESPECIFICITAT</h2>
+
+    <p>
+      L'especificitat estableix com és d'específic un selector per saber quin estil s'aplicarà.
+    </p>
+
+    <p>
+      Com es calcula l'especificitat?
+    </p>
+
+    <p>
+      La fórmula que segueix el navegador és la següent: En una regla determinada, els elements del CSS tenen un valor, el navegador suma els valors de tots els elemnts i el que tingui la suma més alta guanya. 
+    </p>
+
+    <p>
+      Els valors dels elements són els següents:
+    </p>
+
+    <ul>
+      <li>Etiquetes i pseudo-elements 001</li>
+      <li>Classes, atributs i pseudo-classes 010</li>
+      <li>Ids 100</li>
+      <li>Estils en línia 1000</li>
+      <li>!important GUANYA A TOT I NO S'USA MAI</li>
+    </ul>
+
+    <p>Si anem al CSS i posem el cursor sobre un selector, VSC es dirà quina és la seva especificitat.</p>
+
+    <p>
+      El selector que guanya és el que suma 111 punts.     
+    </p>
+    
+    <p>
+      Imagineu que tenim un CSS de 700 linies i ve un nou desenvolupador web i posa el seu selector pel background-color al final...
+    </p>
+
+    <pre>
+      .title {
+        background-color: red;
+      }
+    </pre>
+
+    <p>
+      Ho posa i no funciona. Ho torna a intentar i posa.
+    </p>
+
+    <pre>
+      h1.title {
+        background-color: red;
+      }
+    </pre>
+
+    <p>
+      i tampoc funciona. Al final, quan ha provat moltes maneres i cap funciona, decideix posar un !important
+    </p>
+
+    <pre>
+      h1.title {
+        background-color: red !important;
+      }
+    </pre>
+
+  <p>
+    i ara si que li funciona!
+  </p>
+
+  <p>
+    Què ha passat en realitat?
+  </p>
+
+  <p>
+    Quan posem un !important ens estem carregant l'especificitat. !important guanya a totes les puntacions.
+  </p>
+
+  <p>
+    Imagineu que arriba un nou desenvolupador web i vol donar estil al h1, segueix la mateixa lògica que el seu precedent i escriu...
+  </p>
+
+  <pre>
+    h1.title {
+      background-color: blue !important;
+    }
+  </pre>
+
+  <p>
+    Aquesta última sobreescriurà la precedent.
+  </p>
+
+  <p>
+    Si treiem el h1 i ho deixem així
+  </p>
+
+  <pre>
+    .title {
+      background-color: blue !important;
+    }
+  </pre>
+
+  <p>
+    Ara guanya el vermell altre cop!
+  </p>
+
+  <p>
+    Quina és el truc per no tornar-se boig a l'hora d'escriure un CSS correcte?
+  </p>
+
+  <p>
+    És utilitzar sempre les classes
+  </p>
+
+  <pre>
+      .title {
+        background-color: teal;
+      }
+  </pre>
+
+  <p>
+    Tot això es modificarà una mica quan treballem amb pseudo-classes i pseudo-elements. Modificarem una mica aquesta regla que hem explicat.
+  </p>
+
+    <h2>COM SABEM QUE ESTEM ESCRIVINT UN BON CSS?</h2>
+
+    <p>CSS Specificity Graph Generator és una <a href="https://jonassebastianohlsson.com/specificity-graph/">web</a> en la qual es pot mirar si el vostre CSS és correcte o no.</p>
+
+    <p>
+      Un gràfic amb molts pics vol dir que esteu tenint molts problemes amb l'especificitat i que el CSS no és bo. 
+    </p>
+
+    <h2>ESTILS EN CASCADA</h2>
+
+    <p>
+      Els estils en cascada funciona sempre que l'especificitat sobre l'element sigui la mateixa.
+    </p>
+
+  <pre>
+      .title {
+        background-color: teal;
+      }
+
+      .title {
+        background-color: yellow;
+      }
+  </pre>
+
+  <p>
+    Si la especificitat no és la mateixa, torna a guanyar el color teal.
+  </p>
+
+  <pre>
+    h1.title {
+      background-color: teal;
+    }
+
+    .title {
+      background-color: yellow;
+    }
+</pre>
+
+  <p>
+  Utilitzem sempre classes per la cascada no estigui afectada.
+  </p>
+
+   
+    <p><a href="../index.html">Anar a l'índex</a></p>
+  </body>
+</html>

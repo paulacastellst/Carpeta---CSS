@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <style>
+    /*
+    @import url(css/styles.css);   
+    */
+    pre {
+        font-size: x-large;
+      }
+
+    span {
+        font-weight: bold;
+      }
+    /*
+    body {
+        background-color: coral;
+    } 
+    */
+    </style>
+    <title>Sintaxis de CSS</title>
+  </head>
+  <body>
+
+    <a href="../index.html">Anar a l'índex</a>
+
+    <h1>Sintaxis de CSS</h1>
+
+    <p>Hi ha diferents conceptes que hem de començar a controlar pel que fa la sintaxis de CSS.</p>
+
+    <h2>SELECTOR D'ETIQUETA</h2>
+    <p>
+      Un selector d'etiqueta és un element en el qual hi aplicarem estils. Hi ha
+      diferents tipus de selectors que els estudiarem més endavant. Quan hem
+      posat el selector, obrim i tanquem les claus.
+    </p>
+
+    <pre>
+        selector {
+
+        }
+    </pre>
+
+    <h2>PROPIETAT</h2>
+    <p>
+      La propietat és l'estil que volem canviar a aquell element. No hi ha limit
+      de propietats que podem assignar a un element. Heu de posar les que
+      necessiteu per aconseguir l'estil que busqueu.
+    </p>
+
+    <pre>
+        selector {
+            propietat1: 
+            propietat2: 
+            propietat3: 
+        }
+    </pre>
+
+    <h2>VALOR DE LA PROPIETAT</h2>
+    <p>
+      El valor de la propietat és el paràmetre que agafa aquella propietat que
+      volem modificar.
+    </p>
+
+    <pre>
+        selector {
+            propietat1:valor;
+            propietat2:valor;
+            propietat3:valor;
+        }
+    </pre>
+
+    <h2>DECLARACIÓ I BLOC DE DECLARACIÓ</h2>
+    <p>
+      Una declaració és el conjunt de propietat+valor. Un bloc de declaració
+      conté una o més declaracions. Les declaracions van separades per punt i
+      coma. És molt important que no us deixeu el punt i coma. 
+    </p>
+
+    <pre>
+        selector {
+            declaració1;
+            declaració2;
+            declaració3;
+        }
+    </pre>
+
+    <pre>
+        selector {
+            bloc;
+            de;
+            declaració;
+        }
+    </pre>
+
+    <p>
+        Sapigueu que en la última declaració del bloc, el punt i coma no és necessari.
+    </p>
+
+    <pre>
+        selector {
+            declaració1;
+            declaració2;
+            declaració3
+        }
+    </pre>
+
+    <p>
+        <span>Millor que agafeu el costum de posar punt i coma al final de cada declaració.</span>
+    </p>
+
+    <h2>REGLA DE CSS</h2>
+    <p>
+      Una regla de CSS és el conjunt de selector + un bloc de declaració. Poden
+      haver-hi una o diverses regles CSS en un full d'estils.
+    </p>
+
+    <p>
+      En la
+      <a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank">documentació de W3Schools</a>teniu més informació sobre la sintaxis de CSS.
+    </p>
+
+    <h2>COMENTARIS</h2>
+
+    <p>
+      Els comentaris en CSS s'utilitzen per explicar el codi i són molts útils quan heu de modificar el codi en dates ulteriors. Els comentaris són ignorats pels navegadors.
+    </p>
+
+    <p>
+      S'utilitzen de diferent manera, com ara sobre una regla
+    </p>
+
+    <pre>
+      <code>
+        /* This is a single-line comment */
+        p {
+          color: red;
+        }
+      </code>
+    </pre>
+
+    <p>
+      al costat d'una declaració
+    </p>
+
+    <pre>
+      <code>
+        p {
+          color: red;  /* Set text color to red */
+        }
+      </code>
+    </pre>
+
+    <p>
+      en multilínia
+    </p>
+
+    <pre>
+      <code>
+        /* This is
+        a multi-line
+        comment */
+
+        p {
+          color: red;
+        }
+      </code>
+    </pre>
+
+    <p>
+      Hem de dominar la combinació de tipus de comentaris en un fitxer html
+    </p>
+
+    <pre>
+      <code>
+        &lt;!DOCTYPE html>
+        &lt;html>
+        &lt;head>
+        &lt;style>
+        p {
+          color: red; /* Set text color to red */
+        }
+        &lt;/style>
+        &lt;/head>
+        &lt;body>
+
+        &lt;h2>My Heading</h2>
+
+        &lt;!-- These paragraphs will be red -->
+        &lt;p>Hello World!</p>
+        &lt;p>This paragraph is styled with CSS.</p>
+        &lt;p>CSS comments are not shown in the output.</p>
+
+        &lt;/body>
+        &lt;/html>
+      </code>
+    </pre>
+
+
+    <p><a href="../index.html">Anar a l'índex</a></p>
+  </body>
+</html>

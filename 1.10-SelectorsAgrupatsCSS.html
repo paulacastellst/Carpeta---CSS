@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    pre {
+      font-size: x-large;
+    }
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Selectors agrupats</title>
+  </head>
+  <body>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+     
+    <h1>Selectors agrupats en CSS</h1>
+
+    <p>Els selectors compostos en CSS són aquells que requereixen més d'una paraula, una paraula i un símbol. Es subdivideixen en selectors agrupats, selectors compostos, les pseudoclasses i els pseudoelements. Els dos últims els veurem més endavant perquè són d'un nivell de CSS més avançat.</p>
+
+         
+    <ol>
+
+    <li><h2>SELECTORS AGRUPATS</h2></li>
+    
+    <p>
+      Analitzeu <a href="./1.10-Exercici.html" target="_blank">l'html de l'exercici</a> que us proposo: Si mirem l'HTML aquí veiem que tinc un p amb la classe subtitle, un p amb la classe text, un altre amb la classe text-2, un amb text-3 i text-4.  quatre. Us proposo donar el mateix estil (color de fons steelblue) a tots els paràgrafs, però utilitzant la seva classe, no posant l'etiqueta p sinó utilitzant la classe. 
+    </p>
+    
+    <p>
+      Amb el que hem vist fins ara, hauríem d'anar al CSS i fer això:
+
+    <pre>
+      <code>
+        .text {
+          background-color: steelblue;
+        }
+  
+        .text-2 {
+          background-color: steelblue;
+        }
+  
+        .text-3 {
+          background-color: steelblue;
+        }
+  
+        .text-4 {
+          background-color: steelblue;
+        }
+      </code>
+    </pre>
+      
+      <p>
+      Si escrivim aquest CSS funciona perfectament i és vàlid, però si us adoneu, estem repetint moltes vegades el mateix estil, i un dels principis bàsics tant en programació com en CSS és el de no repetir-se. Si escrivim el mateix diverses vegades, probablement hi hagi una manera d'evitar-ho i aquí és on entren els selectors agrupats.
+      </p>
+
+      <p>
+        Per escriure un selector agrupat, hem de posar les 4 classes amb el seu punt davant separades per comes.
+      </p>
+      
+      <pre>
+        <code>
+          .text, .text-2, .text-3, .text-4 {
+            background-color: steelblue;
+          }
+        </code>
+      </pre>  
+    
+    <p>
+      En el fitxer CCS, comenteu els 4 selectors individuals per anul·lar el seu efecte i poseu aquest selector agrupat. En CSS, es recomana posar-ho de la següent manera per millorar la lectura de la regla.
+    </p>
+
+    <pre>
+      <code>
+        .text,
+        .text-2,
+        .text-3,
+        .text-4 {
+          background-color: steelblue;
+        }
+      </code>
+    </pre> 
+
+    <p>
+      En el nostre exemple, si ho fem amb selectors elementals o amb un selector agrupat, no hi haurà cap diferència. En aquest cas, la diferència d'optimització és pràcticament imperceptible perquè és un estil que només canvia el color. Però en una situació real on hi ha molts elements, que el CSS ocupi menys farà que el navegador pugui processar-ho molt més ràpidament. Així que recordeu que sempre que vegeu el mateix estil, si podeu agrupar els elements, és molt millor, tant per a vosaltres com per al navegador.
+    </p>
+
+    <p>
+      Aquest apartat només us he explicat com seleccionar diferents classes. Podríem tenir un selector agrupat amb altres configuracions que incloguin etiquetes o id: 
+    </p>
+
+    <pre>
+      <code>
+        .intro, #lastname {
+          background-color: steelblue;
+        }
+  
+        h1, p {
+          background-color: steelblue;
+        }
+      </code>
+    </pre> 
+  
+    <p>
+      En la <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">documentació de w3schools</a> teniu més informació sobre els selectors i els seus patrons.
+    </p>
+
+    <p><a href="../index.html">Anar a l'índex</a><p>
+    <p><a href="../1.06 - Selectors de CSS/1.06-SelectorsCSS.html">Anar a tipus de selectors</a></p>
+    
+  </body>
+</html>

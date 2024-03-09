@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+    <title>Width i height en CSS</title>
+</head>
+<body>
+    <p><a href="../index.html">Anar a l'índex</a></p>
+    
+    <h1>WIDTH I HEIGHT EN CSS</h1>
+
+    <p>
+       Les propietats width i height en CSS són molt importants i controlen l'amplada i l'alçada de les nostres caixes. 
+    </p>
+
+    <p>
+        Per explicar-ho, anem al nostre <a href="1.20-Exercici.html" target="_blank">fitxer html d'exercici</a> i en un fons fosc, creem dues caixes: una anomenada "element de block" i una altra anomenada "element de linia" amb les seves classes, block i inline respectivament.
+    </p>
+
+    <pre>
+        <code>
+            &lt;div class="block">Element de block&lt;/div>
+            &lt;a href="#" class="inline">Element de linia&lt;/a>
+        </code>
+    </pre>
+    
+    <p>
+        Primer de tot, al body, posem un background-color obscur i una lletra clara. 
+    </p>
+
+    <pre>
+        <code>
+            body {
+                background-color: #333;
+                color: #fff;
+             }
+        </code>
+    </pre>
+
+    <p>
+        El tema dels colors ja el veurem més endavant. No us preocupeu.
+    </p>
+
+    <p>
+        Creem les dues caixes amb les seves classes. L'element de block li posem un fons purple i a l'element de linia un fons lightcoral i també un color inherit perquè heredi el color del body.
+    </p>
+
+    <pre>
+        <code>
+            .block{
+                background-color: purple;
+            }
+            
+            .inline{
+                background-color: lightcoral;
+                color: inherit;
+            }
+        </code>
+    </pre>
+
+    <p>
+        Les propietats d'ample i alt d'una caixa funcionen amb les propietats width i height. Posem un width de 100px o 200 px i el mateix amb el height.
+    </p>
+
+    <p>
+        Amb els elements inline, no funciona així. Si a .inline li donem un width de 200 px no passa absolutament res. Si li donem un alt de 200 px tampoc funciona. Els elements de linia no tenen medesures. El tamnay d'un element en línia el determina el seu contingut. Això és el més important i no ho heu d'oblidar mai.
+    </p>
+</body>
+</html>
